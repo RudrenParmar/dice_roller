@@ -1,0 +1,18 @@
+Test Plan - Dice Roller v1.2
+==================================================
+
+| # | Input (dice, faces)     | Expected Output                              | Actual Output | Pass/Fail |
+|---|-------------------------|----------------------------------------------|---------------|-----------|
+| 1 | dice=0, then dice=2,    | Re-prompt for dice, then roll between 2-12   |               |           |
+|   | faces=6                 |                                              |               |           |
+| 2 | dice=2, faces=0,        | Re-prompt for faces, then roll between 2-12  |               |           |
+|   | then faces=6            |                                              |               |           |
+| 3 | dice=1, faces=6         | Roll result between 1 and 6 displayed        |               |           |
+| 4 | dice=3, faces=4         | Roll result between 3 and 12 displayed       |               |           |
+| 5 | dice=1, faces=1         | Roll result = 1, congratulatory message shown|               |           |
+| 6 | play again = "no"       | Program exits with "Thanks for playing!"     |               |           |
+
+Notes:
+- Test case 5 guarantees max score (1 die, 1 face always rolls 1 = max).
+- Test cases 1 and 2 verify the re-prompt loop works for invalid input.
+- Test case 6 verifies the play again loop exits cleanly.
